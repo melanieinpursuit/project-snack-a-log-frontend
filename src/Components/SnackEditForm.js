@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link , useNavigate} from "react-router-dom";
 // import "./Transaction.css"
 import axios from "axios";
+const API = process.env.REACT_APP_API_URL
 
 
 
@@ -13,8 +14,9 @@ const SnackEditForm = () => {
         name: "",
         image: "",
         fiber: "",
-        protien: "",
+        protein: "",
         added_sugar: "",
+        is_healthy: false
     });
   
     const updateSnack = (updatedSnack) => {
@@ -82,11 +84,11 @@ const SnackEditForm = () => {
             value={snack.fiber}
             onChange={handleTextChange}
             />
-            <label htmlFor="protien">Protien:</label>
+            <label htmlFor="protein">Protein:</label>
             <input
-            id="protien"
+            id="protein"
             type="number"
-            value={snack.protien}
+            value={snack.protein}
             onChange={handleTextChange}
             />
             <label htmlFor="added_sugar">Added Sugar:</label>
@@ -100,7 +102,9 @@ const SnackEditForm = () => {
             <br />
             <input type="submit" />
       </form>
-            
+            <Link to={`/snacks/${id}`}>
+              <button>Back</button>
+            </Link>
         </div>
     );
 };

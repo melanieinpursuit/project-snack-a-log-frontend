@@ -59,7 +59,7 @@ function SnackDetails () {
                     </Link>
                 </div>
                 <div>
-                    <Link to={`/snacks/id/edit`}>
+                    <Link to={`/snacks/${id}/edit`}>
                         <button>Edit</button>
                     </Link>
                 </div>

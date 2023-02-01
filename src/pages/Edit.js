@@ -4,9 +4,8 @@ import SnackEditForm from '../Components/SnackEditForm';
 const Edit = () => {
     return (
         <div>
-            <h2>Edit</h2>
-            <SnackEditForm />
-            
+            <h2>Edit Snack</h2>
+            <SnackEditForm />   
         </div>
     );
 };

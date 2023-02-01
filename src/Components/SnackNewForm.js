@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+const API = process.env.REACT_APP_API_URL
 
 
 const SnackNewForm = () => {
@@ -11,8 +12,9 @@ const SnackNewForm = () => {
       name: "",
       image: "",
       fiber: "",
-      protien: "",
+      protein: "",
       added_sugar: "",
+      is_healthy: false
     });
   
     const addSnack = (newSnack) => {
@@ -27,11 +29,6 @@ const SnackNewForm = () => {
         .catch((c) => console.warn("catch", c));
     };
   
-    // const handleCheckboxChange = () => {
-    //   setSnack({ ...snack, added_sugar: !snack.added_sugar });
-    // };
-  
-   
     const handleTextChange = (event) => {
       setSnack({ ...snack, [event.target.id]: event.target.value });
     };
@@ -41,8 +38,6 @@ const SnackNewForm = () => {
         addSnack(snack);
       };
     
-
-
     return (
         <div>
         <form onSubmit={handleSubmit}>
@@ -71,11 +66,11 @@ const SnackNewForm = () => {
             value={snack.fiber}
             onChange={handleTextChange}
             />
-            <label htmlFor="protien">Protien:</label>
+            <label htmlFor="protein">Protein:</label>
             <input
-            id="protien"
+            id="protein"
             type="number"
-            value={snack.protien}
+            value={snack.protein}
             onChange={handleTextChange}
             />
             <label htmlFor="added_sugar">Added Sugar:</label>
@@ -89,7 +84,9 @@ const SnackNewForm = () => {
             <br />
             <input type="submit" />
       </form>
-
+            <Link to={`/snacks/`}>
+              <button>Back</button>
+            </Link>
             
         </div>
     );
