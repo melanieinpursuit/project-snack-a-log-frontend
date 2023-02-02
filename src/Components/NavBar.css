@@ -1,0 +1,37 @@
+.logo {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    height: 25%;
+    width: 30%;
+    padding-top: 20px;
+}
+
+.border {
+    padding-top: 1px;
+    border-bottom: 5px solid #8E3900;
+}
+
+.new-nav {
+    overflow: hidden;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    height: 25%;
+    width: 6%;
+    list-style: none;
+}
+
+/* .new-nav {
+    display: flex;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    background-color: #8E3900;
+    color: #FFC400;
+}
+
+.new-button a {
+    color: #FFC400;
+} */

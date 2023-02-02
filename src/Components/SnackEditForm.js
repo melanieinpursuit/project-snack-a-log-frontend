@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate} from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 const API = process.env.REACT_APP_API_URL
 
@@ -50,10 +50,8 @@ const SnackEditForm = () => {
   
     const handleSubmit = (event) => {
       event.preventDefault();
-      updateSnack(snack, id);
+      updateSnack(snack);
     };
-
-
 
 
     return (
@@ -68,9 +66,9 @@ const SnackEditForm = () => {
             placeholder="Name of Snack"
             required
             />
-            <label htmlFor="url">Image:</label>
+            <label htmlFor="url">URL:</label>
             <input
-            id="image"
+            id="url"
             type="text"
             pattern="http[s]*://.+"
             value={snack.image}
@@ -90,7 +88,6 @@ const SnackEditForm = () => {
             id="protein"
             type="number"
             min='0'
-
             value={snack.protein}
             onChange={handleTextChange}
             />

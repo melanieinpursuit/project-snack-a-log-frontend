@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom"
 import heartSolid from "../assets/heart-solid.png";
 import heartOutline from "../assets/heart-regular.png";
+import './SnackDetails.css'
 const API = process.env.REACT_APP_API_URL
 
 function SnackDetails () {
@@ -12,12 +13,11 @@ function SnackDetails () {
 
     const deleteSnack = () => {
         axios
-        .delete
+        .delete(`${API}/snacks/${id}`)
         .then(
             () => {
                 navigate(`/snacks`)
-            },
-            (error) => console.error(error)
+            }
         )
         .catch((c) => console.warn("catch", c))
     }
@@ -36,22 +36,22 @@ function SnackDetails () {
     
     return (
         <article>
-        <tr>
-            <td>
-                {snack.name}
+        <div>
+            <div className="snack-details">
+                <h1>{snack.name}</h1>
                 <br />
-                <img src={snack.image} alt='snacks' />
+                <img className='snack-pic' src={snack.image} alt='snacks' />
                 <br />
                 {snack.is_healthy ? (
-                    <span> <img src={heartSolid} alt="healthy" /> </span>
-                ) : (<span> <img src={heartOutline} alt="not healthy" /></span>)}
+                    <span> <img className='heart-solid' src={heartSolid} alt="healthy" /> </span>
+                ) : (<span> <img className='heart-outline' src={heartOutline} alt="not healthy" /></span>)}
                 <br />
-                Protein: {snack.protein}
+                <h5>Protein:</h5> <h6>{snack.protein}</h6>
                 <br />
-                Fiber: {snack.fiber}
+                <h5>Fiber:</h5> <h6>{snack.fiber}</h6>
                 <br />
-                Added Sugar: {snack.added_sugar}
-            </td>
+                <h5>Added Sugar:</h5> <h6>{snack.added_sugar}</h6>
+            </div>
             <div className="navigation">
                 <div>
                     <Link to={`/snacks`}>
@@ -69,7 +69,7 @@ function SnackDetails () {
                     </button>
                 </div>
             </div>
-        </tr>
+        </div>
     </article>
     )
 }
