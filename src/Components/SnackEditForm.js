@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, Link , useNavigate} from "react-router-dom";
-// import "./Transaction.css"
+import { useParams, useNavigate} from "react-router-dom";
 import axios from "axios";
 const API = process.env.REACT_APP_API_URL
 
@@ -42,7 +41,8 @@ const SnackEditForm = () => {
     // };
   
     useEffect(() => {
-      axios.get(`${API}/snacks/${id}`).then(
+      axios.get(`${API}/snacks/${id}`)
+      .then(
         (response) => setSnack(response.data),
         (error) => navigate(`/not-found`)
       );
@@ -81,6 +81,7 @@ const SnackEditForm = () => {
             <input
             id="fiber"
             type="number"
+            min='0'
             value={snack.fiber}
             onChange={handleTextChange}
             />
@@ -88,6 +89,8 @@ const SnackEditForm = () => {
             <input
             id="protein"
             type="number"
+            min='0'
+
             value={snack.protein}
             onChange={handleTextChange}
             />
@@ -95,8 +98,10 @@ const SnackEditForm = () => {
             <input
             id="added_sugar"
             type="number"
+            min='0'
+            value={snack.added_sugar}
             onChange={handleTextChange}
-            checked={snack.added_sugar}
+            
             />
 
             <br />
