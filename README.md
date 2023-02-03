@@ -1,5 +1,9 @@
 # Full Stack Application Pair Project
 
+Back-End Repo: https://github.com/Shaik-Kamil/project-snack-a-log-backend
+Deployed Back-End: https://snack-a-log-project-backend.onrender.com/
+
+
 ## Snack-a-log
 
 Create an app that allows users to log their favorite snacks. Add functionality that will enable users to see whether or not their snack is healthy based on a simple algorithm.
