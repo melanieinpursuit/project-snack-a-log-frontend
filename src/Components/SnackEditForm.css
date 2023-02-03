@@ -37,4 +37,9 @@ h2 {
 
 label {
     font-family: Pinewood;
+    text-decoration: solid 2px underline;
+}
+
+input {
+    font-family: Georgia;
 }
