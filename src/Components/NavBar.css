@@ -12,6 +12,13 @@
     border-bottom: 10px outset #a2ddff;
 }
 
+.grassy {
+    width: 100%;
+    height: 100%;
+    padding-top: 0px;
+    margin-bottom: 5px;
+}
+
 .new-nav {
     overflow: hidden;
     display: block;

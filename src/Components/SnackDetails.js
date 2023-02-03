@@ -40,7 +40,7 @@ function SnackDetails () {
     return (
         <article>
         <div>
-                <h1 className='snack-name'>{snack.name}</h1>
+                <h1 className='snack-name2'>{snack.name}</h1>
                 <img className='snack-pic' src={snack.image} alt='snacks' />
             <table className="snack-details">
                 <th> {snack.is_healthy ? (

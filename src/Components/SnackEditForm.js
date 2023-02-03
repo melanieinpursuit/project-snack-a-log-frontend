@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import './SnackEditForm.css'
 const API = process.env.REACT_APP_API_URL
 
 
@@ -102,10 +103,10 @@ const SnackEditForm = () => {
             />
 
             <br />
-            <input type="submit" />
+            <button className="submit" type="submit">Submit</button>
       </form>
             <Link to={`/snacks/${id}`}>
-              <button>Back</button>
+              <button className="back-button">Back</button>
             </Link>
         </div>
     );

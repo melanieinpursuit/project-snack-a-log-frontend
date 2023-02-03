@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import './SnackNewForm.css'
 const API = process.env.REACT_APP_API_URL
 
 
@@ -87,10 +88,10 @@ const SnackNewForm = () => {
             />
 
             <br />
-            <input type="submit" />
+            <button className="submit" type="submit">Submit</button>
       </form>
             <Link to={`/snacks/`}>
-              <button>Back</button>
+              <button className="back-button">Back</button>
             </Link>
             
         </div>

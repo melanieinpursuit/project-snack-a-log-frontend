@@ -1,0 +1,40 @@
+.submit {
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid #e47f3b;
+    text-align: center;
+    background-color: #903900;
+    color: #FFC403;
+    font-family: Pinewood;
+    font-size: 13px;
+}
+
+form {
+    text-align: center;
+}
+
+@font-face {
+    font-family: Pinewood;
+    src: url(https://www.fontspace.com/pinewood-font-f5891);
+}
+
+h2 {
+    font-family: Pinewood;
+    text-align: center;
+    color:#903900;
+    text-decoration: underline 4px #903900;
+    padding-top: 30px;
+    text-shadow: 2px 2px 2px #E8B08B;
+}
+
+.back-button {
+    display: inline-block;
+    margin-left: 667px;
+    font-size: 13px;
+    width: 110px;
+    margin-bottom: 40px;
+}
+
+label {
+    font-family: Pinewood;
+}
