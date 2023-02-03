@@ -19,7 +19,7 @@ const Snacks = () => {
     }, [])
 
     return (
-        <div>
+        <div className='snacks'>
             {snacks.map((snack) => {
                 return <Snack key={snack.id} snack={snack} />
             })}

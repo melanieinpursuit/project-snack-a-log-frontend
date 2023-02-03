@@ -1,0 +1,10 @@
+.enter {
+    overflow: hidden;
+    display: block;
+    height: 300px;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 0px;
+    justify-content: center;
+}

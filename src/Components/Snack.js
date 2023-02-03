@@ -2,23 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import heartSolid from "../assets/heart-solid.png";
 import heartOutline from "../assets/heart-regular.png";
+import './Snack.css'
 
 const Snack = ({ snack }) => {
     return (
         <section>
 
             <Link to={`/snacks/${snack.id}`}> 
-            <h1>{snack.name}</h1> 
+            <h1 className='snack-name'>{snack.name}</h1> 
             </Link>
 
-            <img src={snack.image} alt="Snack image"></img>
+            <img className='snack-img' src={snack.image} alt="Snack"></img>
             {snack.is_healthy ? (
                 <span>
-                    <img src={heartSolid}></img>
+                    <img className='solid-heart' src={heartSolid} alt='healthy'></img>
                 </span>
                 ): (
                     <span>
-                        <img src={heartOutline}></img>
+                        <img className='heart-outline' src={heartOutline} alt='unhealthy'></img>
                     </span>
                 )}
         </section>

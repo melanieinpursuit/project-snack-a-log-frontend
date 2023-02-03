@@ -1,0 +1,77 @@
+.solid-heart {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.heart-outline {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.snack-img {
+    border: 5px solid #903900;
+    border-radius: 30px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    height: 65%;
+    width: 65%;
+    box-shadow: 5px 5px 5px #e47f3b;
+}
+
+.snack-name {
+    text-shadow: 2px 2px 2px #e47f3b;
+    padding-top: 30px;
+    white-space: nowrap;
+    font-size: 40px;
+    text-align: center;
+    transition: 0.2s;
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: Pinewood;
+    src: url(https://www.fontspace.com/pinewood-font-f5891);
+}
+
+/* unvisited link */
+a:link {
+    font-family: Pinewood;
+    color: #903900;
+    text-decoration: none;
+}
+  
+  /* visited link */
+a:visited {
+    color: #903900;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+a:hover {
+    transition: 0.2s;
+    color: #e47f3b;
+  }
+  
+  /* selected link */
+a:active {
+    font-family: Pinewood;
+    color: #903900;
+    text-decoration: none;
+  }

@@ -1,9 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+import enter from '../assets/ENTER SIGN.png'
+import './Home.css'
 
 const Home = () => {
     return (
         <div>
-            <h2>Welcome to the Home page</h2>
+            <Link to='/snacks'>
+                <img className='enter' src={enter} alt='enter'></img>
+            </Link>
             
         </div>
     );
