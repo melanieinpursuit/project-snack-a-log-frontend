@@ -37,10 +37,6 @@ const SnackEditForm = () => {
       setSnack({ ...snack, [event.target.id]: event.target.value });
     };
   
-    // const handleCheckboxChange = () => {
-    //   setSnack({ ...snack, added_sugar: !snack.added_sugar });
-    // };
-  
     useEffect(() => {
       axios.get(`${API}/snacks/${id}`)
       .then(

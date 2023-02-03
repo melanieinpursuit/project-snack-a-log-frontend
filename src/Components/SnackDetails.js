@@ -44,7 +44,7 @@ function SnackDetails () {
                 <img className='snack-pic' src={snack.image} alt='snacks' />
             <table className="snack-details">
                 <th> {snack.is_healthy ? (
-                        <th> <img className='heart-solid2' src={heartSolid} alt="healthy" /></th>
+                        <th><img className='heart-solid2' src={heartSolid} alt="healthy" /></th>
                     ) : <th><img className='heart-outline2' src={heartOutline} alt="not healthy" /></th>}
                     <tr>
                         <td><h3 className="protein">Protein:</h3></td>
