@@ -1,5 +1,6 @@
 # Full Stack Application Pair Project
 
+Front-End Repo: https://github.com/melanieinpursuit/project-snack-a-log-frontend
 Back-End Repo: https://github.com/Shaik-Kamil/project-snack-a-log-backend
 Deployed Back-End: https://snack-a-log-project-backend.onrender.com/
 
